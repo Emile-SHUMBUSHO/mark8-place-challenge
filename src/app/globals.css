@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 220 13% 18%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 13% 18%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 13% 18%;
+    --primary: 64 78% 45%; /* #C1CF16 */
+    --primary-foreground: 0 0% 0%;
+    --secondary: 220 13% 95%;
+    --secondary-foreground: 220 13% 18%;
+    --muted: 220 13% 95%;
+    --muted-foreground: 220 9% 46%;
+    --accent: 64 78% 45%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 64 78% 45%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 215 29% 15%; /* #1C2834 */
+    --foreground: 0 0% 95%;
+    --card: 215 29% 15%;
+    --card-foreground: 0 0% 95%;
+    --popover: 215 29% 15%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 64 78% 45%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 220 13% 15%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 220 13% 15%;
+    --muted-foreground: 220 9% 65%;
+    --accent: 64 78% 45%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 95%;
+    --border: 220 13% 15%;
+    --input: 220 13% 15%;
+    --ring: 64 78% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+  body {
+    @apply bg-gray-50 text-foreground font-sans;
+  }
+}
+
+/* Custom classes to match Figma */
+.hero-section {
+  background: #1c2834;
+}
+
+.product-card {
+  background: hsl(0 0% 100%);
+  border: 1px solid hsl(220 13% 91%);
+}
+
+.text-price {
+  @apply text-primary font-semibold;
+}
+
+.text-price-original {
+  @apply text-muted-foreground line-through text-sm;
+}
